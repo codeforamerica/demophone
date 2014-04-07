@@ -82,6 +82,11 @@ section {
   padding: 10px;
 }
 
+section.showBackground {
+  background: url(../images/bubbles-icon.png) no-repeat center;
+  background-size: 150px 150px;
+}
+
 section div {
   max-width: 255px;
   word-wrap: break-word;

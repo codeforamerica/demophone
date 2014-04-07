@@ -24,7 +24,6 @@ $(document).ready(function() {
 
   $('.dialButton').click(start)
   $('#dialerForm').submit(start);
-
 });
 
 var setupTexting = function(phoneNumber) {
@@ -39,6 +38,7 @@ var setupTexting = function(phoneNumber) {
       $section.append('<div class="from-them"><p>' + text + '</p></div>')
       $section.append('<div class="clear"></div>');
       $section.animate({ scrollTop: $section.height() });
+      $section.removeClass('showBackground');
     }, dataType: 'json', complete: poll, timeout: 30000 });
   })();
 
@@ -61,5 +61,6 @@ var setupTexting = function(phoneNumber) {
     $section.append('<div class="from-me"><p>' + text + '</p></div>')
     $section.append('<div class="clear"></div>');
     $section.animate({ scrollTop: $section.height() });
+    $section.removeClass('showBackground');
   });
 };
