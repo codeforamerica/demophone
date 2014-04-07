@@ -2,6 +2,8 @@
 
 Ever needed to show off your fancy new SMS-based interface? Struggled as you asked everyone to gather around your phone to see it? Demophone was made for you. It's a simple, online phone for SMS demos. 
 
+![demophone screenshot](https://cloud.githubusercontent.com/assets/1435836/2635931/db674a62-be8a-11e3-857f-544b6fba9243.png)
+
 # Deploying to Herkou
 
 The first thing you need to do is get a phone number and Twilio auth tokens for demophone. Refer to the [Twilio FAQ](http://www.twilio.com/help/faq/phone-numbers). Once you have those, clone the repo and run these commands:
