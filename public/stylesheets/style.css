@@ -46,7 +46,7 @@ button:focus {
   position: absolute;
   left: 50%;
   font-size: 18px;
-  font-family: HelveticaNeue-Light;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue";
   top: 50%;
   margin-top: -200px;
 }
@@ -55,7 +55,7 @@ button:focus {
   border: none;
   border-bottom: 1px solid #C0C0C0;
   font-size: 32px;
-  font-family: HelveticaNeue-Light;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue";
   margin-top: 8px;
   margin-bottom: 18px;
   width: 280px;
@@ -114,8 +114,9 @@ section div {
   bottom: -2px;
   right: -7px;
   height: 20px;
-  border-right: 20px solid #0B93F6;
+  border-left: 20px solid #0B93F6;
   border-bottom-left-radius: 16px 14px;
+  transform: translate(0, -2px);
   -webkit-transform: translate(0, -2px);
 }
 
@@ -129,6 +130,7 @@ section div {
   height: 20px;
   background: #f1f1f1;
   border-bottom-left-radius: 10px;
+  transform: translate(-30px, -2px);
   -webkit-transform: translate(-30px, -2px);
 }
 
@@ -148,8 +150,9 @@ section div {
   bottom: -2px;
   left: -7px;
   height: 20px;
-  border-left: 20px solid #E5E5EA;
+  border-right: 20px solid #E5E5EA;
   border-bottom-right-radius: 16px 14px;
+  transform: translate(0, -2px);
   -webkit-transform: translate(0, -2px);
 }
 
@@ -163,5 +166,6 @@ section div {
   height: 20px;
   background: #f1f1f1;
   border-bottom-right-radius: 10px;
+  transform: translate(-30px, -2px);
   -webkit-transform: translate(-30px, -2px);
 }
