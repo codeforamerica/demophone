@@ -1,0 +1,6 @@
+when you go there, it should already be loaded to the right conversation.
+
+// from twilio, let's get the last conversation
+// we also want to see the texts that are being sent...
+// so for each one sending it, we should also sent it out to all the clients.....
+// this makes it more complex
