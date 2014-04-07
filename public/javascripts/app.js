@@ -8,6 +8,12 @@ $(document).ready(function() {
 
     var phoneNumber = $dialerInput.val();
     if (!phoneNumber) return;
+
+    // Bare bones phone number cleanup
+    phoneNumber = phoneNumber.replace(/[^0-9]/g, '');
+    if (phoneNumber[0] != '1') phoneNumber = '1' + phoneNumber;
+    phoneNumber = '+' + phoneNumber;
+
     // TODO: additional phone number error checks here
 
     $('.dialButton').hide();
