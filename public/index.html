@@ -16,15 +16,17 @@
     </section>
 
     <form id="textForm" action="#">
-      <input class="textInput" type="text" placeholder="Type text to send.">
+      <input class="textInput" type="text" disabled="disabled" placeholder="">
       <!-- <input class="lookupButton" type="submit" value="Lookup"> -->
     </form>
   </div>
 
   <div class="dialer">
-    <div>Send texts to:</div>
-    <input class="dialerInput" placeholder="e.g. +14155039174">
-    <div class="dialButton">Start</div>
+    <div class="dialerInstructions">Send texts to:</div>
+    <form id="dialerForm" action="#">
+      <input class="dialerInput" placeholder="e.g. +14155039174">
+      <div class="dialButton"><a href="#">Start</a></div>
+    </form>
   </div>
 
   <script src="javascripts/vendor/jquery-1.11.0.min.js"></script>

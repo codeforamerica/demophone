@@ -20,7 +20,7 @@ a {
   margin-top: -300px;
 }
 
-form {
+#textForm {
   position: absolute;
   bottom: 86px;
   left: 25px;
@@ -61,9 +61,10 @@ button:focus {
   width: 280px;
 }
 
-.dialButton {
+.dialButton a {
   font-size: 16px;
   color: #0B93F6;
+  text-decoration: none;
 }
 
 /****

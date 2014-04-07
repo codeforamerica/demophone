@@ -1,5 +1,34 @@
 $(document).ready(function() {
-  // Grab DOM elements
+  // set cursor in the right place
+  var $dialerInput = $('.dialerInput');
+  $dialerInput.focus();
+
+  var start = function(event) {
+    event.preventDefault();
+
+    var phoneNumber = $dialerInput.val();
+    if (!phoneNumber) return;
+    // TODO: additional phone number error checks here
+
+    $('.dialButton').hide();
+    $dialerInput.attr('disabled', 'disabled')
+    $('.dialerInstructions').css('color', '#B3B3B3').html('Sending texts to:');
+
+    $('.textInput')
+      .removeAttr('disabled')
+      .attr('placeholder', 'Type text to send.')
+      .focus();
+
+    setupTexting(phoneNumber);
+  };
+
+  $('.dialButton').click(start)
+  $('#dialerForm').submit(start);
+
+});
+
+var setupTexting = function(phoneNumber) {
+    // Grab DOM elements
   var $section = $('section');
 
   // Enable long-polling to get text responses.
@@ -10,11 +39,11 @@ $(document).ready(function() {
       $section.append('<div class="from-them"><p>' + text + '</p></div>')
       $section.append('<div class="clear"></div>');
       $section.animate({ scrollTop: $section.height() });
-    }, dataType: "json", complete: poll, timeout: 30000 });
+    }, dataType: 'json', complete: poll, timeout: 30000 });
   })();
 
   // Hookup events for text sending
-  $("#textForm").submit(function(event) {
+  $('#textForm').submit(function(event) {
     event.preventDefault();
 
     var $textInput = $('.textInput');
@@ -25,7 +54,7 @@ $(document).ready(function() {
     if (text === '') return;
 
     $.post('/sendText', {
-      to: '+14155039174',
+      to: phoneNumber,
       body: text,
     });
 
@@ -33,4 +62,4 @@ $(document).ready(function() {
     $section.append('<div class="clear"></div>');
     $section.animate({ scrollTop: $section.height() });
   });
-});
+};
