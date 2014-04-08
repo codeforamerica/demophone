@@ -20,3 +20,12 @@ heroku info
 This will provide you with the url of your app.
 
 The final step is to create the Twilio hook. Go the [Twilio Phone Controls](https://www.twilio.com/user/account/phone-numbers/incoming), select your phone number, and a messaging url of `<app_url>/receiveText`.
+
+# Adding a dash of security
+
+To prevent people from using the endpoint to send twilio messages, you can enable Basic Auth. Just add a username and password to the environment variables. On Heroku:
+
+```
+heroku config:set HTTP_BASIC_USER=<username>
+heroku config:set HTTP_BASIC_PASS=<password>
+```
