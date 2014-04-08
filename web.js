@@ -6,6 +6,11 @@ var express = require('express');
 var app = express();
 var client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
+// Enabled Basic Auth if username and password configured
+if (process.env.USERNAME && process.env.PASSWORD) {
+  app.use(express.basicAuth(process.env.USERNAME, process.env.PASSWORD));
+}
+
 // Express Middleware
 app.use(logfmt.requestLogger());
 app.use(express.json());
