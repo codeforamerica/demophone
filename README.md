@@ -24,6 +24,6 @@ The final step is to create the Twilio hook. Go the [Twilio Phone Controls](http
 To prevent people from using the endpoint to send twilio messages, you can enable Basic Auth. Just add a username and password to the environment variables. On Heroku:
 
 ```
-heroku config:set USERNAME=<username>
-heroku config:set PASSWORD=<password>
+heroku config:set HTTP_BASIC_USER=<username>
+heroku config:set HTTP_BASIC_PASS=<password>
 ```
